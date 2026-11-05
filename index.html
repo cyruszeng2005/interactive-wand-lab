@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>互动魔杖实验室</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header><span>HCI PROTOTYPE / 01</span><h1>互动魔杖实验室</h1><p>在画布内拖动，或用绿色笔帽在镜头前绘出咒语。</p></header>
+<div class="layout">
+  <section class="stage"><canvas id="stage" width="640" height="480" aria-label="施法画布"></canvas>
+    <p id="status" role="status">鼠标模式已就绪。按住并绘制，松开识别。</p>
+  </section>
+  <aside>
+    <h2>咒语图谱</h2><div id="cards"></div>
+    <h2>选择输入</h2>
+    <div class="buttons"><button id="camera">启用摄像头</button><button id="mouse">切回鼠标</button></div>
+    <button id="record" disabled>开始采集（空格）</button>
+    <p class="tip">摄像头模式下把亮绿色标记伸入画面。先开始采集，画完后停止。使用左右镜像后的画面方向。连续丢失标记会取消本次施法。</p>
+  </aside>
+</div>
+</main>
+<video playsinline muted hidden></video>
+<script type="module" src="app.mjs"></script>
+</body></html>
